@@ -1,0 +1,50 @@
+{
+  "productlists": [
+    {
+      "productName": "Iphone 14 pro",
+      "category": "Electronics",
+      "condition": "Brand New",
+      "price": 110099,
+      "description": "A15 bionic chip & 256gb storage ",
+      "date": "2022-11-09T18:30:00.000Z",
+      "id": 1
+    },
+    {
+      "productName": "iphone14",
+      "category": "Electronics",
+      "condition": "Brand New",
+      "price": 79000,
+      "description": "128gb space grey",
+      "date": "2022-11-08T18:30:00.000Z",
+      "id": 2
+    },
+    {
+      "productName": "samsung s22 ultra",
+      "category": "Electronics",
+      "condition": "Useded",
+      "price": 75000,
+      "description": "6months warrenty",
+      "date": "2022-11-19T18:30:00.000Z",
+      "id": 3
+    },
+    {
+      "productName": "xiaomi",
+      "category": "Electronics",
+      "condition": "Brand New",
+      "price": 15000,
+      "description": "8gb ram 128gb",
+      "date": "2022-11-07T18:30:00.000Z",
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
