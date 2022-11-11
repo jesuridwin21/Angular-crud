@@ -15,4 +15,12 @@ export class ApiService {
   getproduct() {
     return this.http.get<any>("http://localhost:3000/productlists/");
   }
+
+  putproduct(data:any,id : number) {
+    return this.http.put<any>("http://localhost:3000/productlists/"+id, data);
+  }
+
+  deleteproduct(id:number) {
+    return this.http.delete<any>("http://localhost:3000/productlists/"+id);
+  }
 }

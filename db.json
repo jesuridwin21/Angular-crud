@@ -12,7 +12,7 @@
     {
       "productName": "iphone14",
       "category": "Electronics",
-      "condition": "Brand New",
+      "condition": "Refurbished",
       "price": 79000,
       "description": "128gb space grey",
       "date": "2022-11-08T18:30:00.000Z",
@@ -28,13 +28,13 @@
       "id": 3
     },
     {
-      "productName": "xiaomi",
+      "productName": "samsung x-fold",
       "category": "Electronics",
       "condition": "Brand New",
-      "price": 15000,
-      "description": "8gb ram 128gb",
-      "date": "2022-11-07T18:30:00.000Z",
-      "id": 4
+      "price": 140000,
+      "description": "12gb ram 256gb",
+      "date": "2022-11-15T18:30:00.000Z",
+      "id": 6
     }
   ],
   "comments": [

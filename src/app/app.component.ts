@@ -13,7 +13,7 @@ import {MatTableDataSource} from '@angular/material/table';
 })
 export class AppComponent implements OnInit {
   title = 'angularcrud';
-  displayedColumns: string[] = ['productName', 'category', 'date', 'price', 'condition','description'];
+  displayedColumns: string[] = ['productName', 'category', 'date', 'price', 'condition','description', 'action'];
   dataSource!: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -28,7 +28,11 @@ export class AppComponent implements OnInit {
   openDialog() {
     this.dialog.open(DialogComponent, {
       width: '30%'
-    });
+    }).afterClosed().subscribe(val=>{
+      if(val === 'Save'){
+        this.getallproducts();
+      }
+    })
   }
   getallproducts() {
     this.api.getproduct()
@@ -45,6 +49,18 @@ export class AppComponent implements OnInit {
     })
   }
 
+  editproduct(row: any) {
+    this.dialog.open(DialogComponent,{
+      width: '30%',
+      data:row
+    }).afterClosed().subscribe(val=>{
+      if(val === 'Update'){
+        this.getallproducts();
+      }
+    })
+  }
+
+
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -52,6 +68,15 @@ export class AppComponent implements OnInit {
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
+  }
+
+  deleteproduct(id:number ) {
+    this.api.deleteproduct(id)
+    .subscribe({
+      next:(res)=>{
+        this.getallproducts();
+      }
+    })
   }
 
 }
